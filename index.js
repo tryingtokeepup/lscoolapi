@@ -1,3 +1,6 @@
-const server = require('./api/server.js');
+const server = require("./api/server.js");
 
-server.listen(5000, () => console.log('server on port 5k'));
+// enable dyanmic ports for hosting providers
+
+const port = process.env.PORT || 5000;
+server.listen(port, () => console.log("server on port 5k"));
